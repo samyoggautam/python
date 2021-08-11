@@ -4,9 +4,7 @@ import tkinter.messagebox as mb
 
 class WinAndFrame:
     def __init__(self, win):
-        """Method take tkinter window as a parameter.
-        |--------------------------------------------
-        Here we have modify window feature such as title, geometry and resizable"""
+
         self.win = win  # Window passed by the user is store here.
         self.win.title('!!!!!!!!!!!! Group D: Basic Calculator !!!!!!!!!!!!!!')  # Title of the window.
         self.win.geometry('520x548+0+0')  # Size of window is set to 520x548 and start from x,y = 0,0.
@@ -82,18 +80,15 @@ class MenuAndButton(WinAndFrame):
 
     @staticmethod
     def creation_credits():
-        """This static method shows the name of the people who has helped in the creation of this program."""
-        mb.showinfo('Credits', 'Credits goes to \nAmrit Upreti \nAnkit Shah \nAyush Ghimire \nSamyog Shah')
+
+        mb.showinfo('Credits', 'Credits goes to \nsamyog Gautam')
 
     def display(self, value):
-        """Helps to display output to the entry box."""
+
         self.total.set(value)
 
     def add_operator(self, value):
-        """Helps to add operator on the click of a button.
-        If two operator is provided one after another then it will consider latest operator
-        and update it to the entry box
-        and evaluate data by using instance method equal(self) which is created below."""
+
 
         self.text = self.entry_box.get()
         self.equal()
